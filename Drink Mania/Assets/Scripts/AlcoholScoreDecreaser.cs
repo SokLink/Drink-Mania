@@ -15,7 +15,7 @@ public class AlcoholScoreDecreaser : MonoBehaviour
     {
         yield return new WaitForSeconds(_timeBeforeDercrease);
 
-        if (alcoholScoreCounter.alcoholScore >= 10f)
+        if (alcoholScoreCounter.alcoholScore > 10f)
         {
             while (true)
             {

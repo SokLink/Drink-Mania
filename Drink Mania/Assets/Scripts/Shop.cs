@@ -8,6 +8,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private UIController uIController;
     [SerializeField] private SwapAlcohol swapAlcohol;
     [SerializeField] private PlayerAlcoholAnimations playerAlcoholAnimations;
+    [SerializeField] private ClickZoneChange clickZoneChange;
 
     [NonSerialized] public int nextLvl = 2;
     [NonSerialized] public float price = 1;
@@ -25,21 +26,30 @@ public class Shop : MonoBehaviour
         {
             if (nextLvl == 11 || nextLvl == 21 || nextLvl == 31 || nextLvl == 41)
             {
-                alcoholScoreEncreaser._encreaseMagnitude += 1;
+                alcoholScoreEncreaser.encreaseMagnitude += 1;
                 alcoholScoreCounter.alcoholScore -= price;
+
+                clickZoneChange.DecreaseClickZoneScale();
 
                 swapAlcohol.Swap(nextLvl);
                 playerAlcoholAnimations.isBeer = false;
             }
 
-            else
+            else if (nextLvl >= 51)
             {
-                alcoholScoreEncreaser._encreaseMagnitude += 1;
-                alcoholScoreCounter.alcoholScore -= price;
+
             }
 
-            nextLvl = alcoholScoreEncreaser._encreaseMagnitude + 1;
-            price = alcoholScoreEncreaser._encreaseMagnitude * _priceModificator;
+            else
+            {
+                alcoholScoreEncreaser.encreaseMagnitude += 1;
+                alcoholScoreCounter.alcoholScore -= price;
+
+                clickZoneChange.DecreaseClickZoneScale();
+            }
+
+            nextLvl = alcoholScoreEncreaser.encreaseMagnitude + 1;
+            price = alcoholScoreEncreaser.encreaseMagnitude * _priceModificator;
 
             uIController.ShopUIController(nextLvl, price);
         }

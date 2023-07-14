@@ -27,6 +27,11 @@ public class UIController : MonoBehaviour
             shopButtonText.text = "Upgrade alcohol to next (Cost: " + price.ToString() + " AS)";
         }
 
+        else if (nextLvl >= 51)
+        {
+            shopButtonText.text = "Max lvl";
+        }
+
         else
         {
             shopButtonText.text = "Upgrade durability to lvl " + nextLvl.ToString() + " (Cost: " + price.ToString() + " AS)";
