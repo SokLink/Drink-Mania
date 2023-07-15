@@ -6,8 +6,11 @@ public class StartMenusController : MonoBehaviour
     [SerializeField] private GameObject startPanel;
     [SerializeField] private GameObject clickZone;
 
+    [SerializeField] private AudioManager audioManager;
+
     public void StartButton()
     {
+        audioManager.SwapToMainMusic();
         startPanel.SetActive(false);
         clickZone.SetActive(true);
     }
