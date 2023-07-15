@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ddfe210ee4fb4424bb43d73f3f485c59
+guid: 6492288cdbd8ea940934eec86e732a51
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 35
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,211 +105,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileSetCharacters_0
+      name: Cowboy
       rect:
         serializedVersion: 2
-        x: 20
-        y: 263
-        width: 185
-        height: 226
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 810941954f674f64a82b884016b778b3
-      internalID: 668046271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSetCharacters_1
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 258
-        width: 185
-        height: 226
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4b56c90d0403e84abcaf61bd15bb07b
-      internalID: 780759014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSetCharacters_2
-      rect:
-        serializedVersion: 2
-        x: 474
-        y: 369
-        width: 117
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4ff89394e6796f46b4a11ac5718a1cd
-      internalID: -647725095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSetCharacters_3
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 384
-        width: 152
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f34f6bf63090a4f4894b602c9eea94b2
-      internalID: 2132096929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSetCharacters_4
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 145
+        x: 17
+        y: 135
         width: 108
-        height: 111
+        height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48c459d3863a00f4f86f4d94b3323b3b
-      internalID: 729499132
+      spriteID: 4900fda7e5eefb14eb687c4e2633dc4e
+      internalID: 2136045278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSetCharacters_5
+      name: Pirat
       rect:
         serializedVersion: 2
-        x: 157
-        y: 140
-        width: 82
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c32c3eeae135fa439e43dd2a9b68c0e
-      internalID: 676500655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSetCharacters_6
-      rect:
-        serializedVersion: 2
-        x: 481
-        y: 223
+        x: 144
+        y: 146
         width: 117
-        height: 134
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05eab3477f92cdb4abfc7d4dba353fa4
-      internalID: -1767966298
+      spriteID: 068324bf49824004bafd9ec235d5a742
+      internalID: -1297002544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSetCharacters_7
+      name: Mexican
       rect:
         serializedVersion: 2
-        x: 605
-        y: 238
+        x: 277
+        y: 131
         width: 153
-        height: 102
+        height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 553dbd0d58d4dff449e37e407523cc8b
-      internalID: 1563945927
+      spriteID: 529769b924002ec4586e4aac08f78f3f
+      internalID: 20873562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSetCharacters_8
+      name: Russian
       rect:
         serializedVersion: 2
-        x: 10
-        y: 16
-        width: 108
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eca84b918e3dc3842be9841eb265be48
-      internalID: 1208037903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TileSetCharacters_9
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 13
+        x: 451
+        y: 131
         width: 82
-        height: 107
+        height: 137
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b47424a03d2e78845998ff7a67975cd2
-      internalID: 2117037011
+      spriteID: 92ffd350f7697984f84361740aa5d1c1
+      internalID: 1610838441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DrunkCowboy
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 6
+        width: 108
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f11aade07e89941949502dc981bb46
+      internalID: 2003193868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DrunkPirat
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 6
+        width: 117
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598083665f037de40abd3a386cd38484
+      internalID: -1191367070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DrunkMexican
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 153
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c50963dce25e44cb9a378805fc9e73
+      internalID: 747473021
       vertices: []
       indices: 
       edges: []
@@ -325,16 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileSetCharacters_4: 729499132
-      TileSetCharacters_7: 1563945927
-      TileSetCharacters_2: -647725095
-      TileSetCharacters_0: 668046271
-      TileSetCharacters_8: 1208037903
-      TileSetCharacters_6: -1767966298
-      TileSetCharacters_9: 2117037011
-      TileSetCharacters_3: 2132096929
-      TileSetCharacters_1: 780759014
-      TileSetCharacters_5: 676500655
+      Russian: 1610838441
+      DrunkPirat: -1191367070
+      Cowboy: 2136045278
+      DrunkCowboy: 2003193868
+      Mexican: 20873562
+      DrunkMexican: 747473021
+      Pirat: -1297002544
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

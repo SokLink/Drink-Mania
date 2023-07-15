@@ -6,6 +6,7 @@ public class PlayerAlcoholAnimations : MonoBehaviour
 {
     [SerializeField] private Transform alcoholTransform;
     [SerializeField] private SpriteRenderer alcoholSprite;
+    [SerializeField] private DrinkParticles drinkParticles;
 
     [SerializeField] private Sprite playerHoldBeerSprite;
     [SerializeField] private Sprite playerDrinkBeerSprite;
@@ -38,6 +39,7 @@ public class PlayerAlcoholAnimations : MonoBehaviour
             alcoholTransform.localScale = _alcogolScaleTo;
         }
 
+        drinkParticles.EnableAndDisableDrinkParticles(100);
         StartCoroutine(PlayerEndDrinkAlcoholAnimation());
     }
 
@@ -46,6 +48,7 @@ public class PlayerAlcoholAnimations : MonoBehaviour
         yield return new WaitForSeconds(_drinkTime);
 
         alcoholTransform.position = _originAlcoholPosition;
+        drinkParticles.EnableAndDisableDrinkParticles(0);
 
         if (isBeer)
         {
