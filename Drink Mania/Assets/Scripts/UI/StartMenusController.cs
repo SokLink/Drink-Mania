@@ -3,15 +3,12 @@ using UnityEngine;
 public class StartMenusController : MonoBehaviour
 {
     [SerializeField] private GameObject startMenu;
-    [SerializeField] private GameObject soundMenu;
-    [SerializeField] private GameObject tutorialMenu;
-    [SerializeField] private GameObject developersMenu;
-
+    [SerializeField] private GameObject startPanel;
     [SerializeField] private GameObject clickZone;
 
     public void StartButton()
     {
-        startMenu.SetActive(false);
+        startPanel.SetActive(false);
         clickZone.SetActive(true);
     }
 
