@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class SwapAlcoholAndAntagonist : MonoBehaviour
 {
     [SerializeField] private Shop shop;
+    [SerializeField] private AnimationController animationController;
 
     [SerializeField] private SpriteRenderer playerAlcoholSprite;
     [SerializeField] private SpriteRenderer antagonistAlcoholSprite;
@@ -29,30 +31,26 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
         {
             case 11:
                 playerAlcoholSprite.sprite = VhiskeySprite;
-                antagonistAlcoholSprite.sprite = VhiskeySprite;
 
-                antagonistSprite.sprite = cowboy;
+                StartCoroutine(AntagonistSwap(cowboy, VhiskeySprite));
                 break;
 
             case 21:
                 playerAlcoholSprite.sprite = RumSprite;
-                antagonistAlcoholSprite.sprite = RumSprite;
 
-                antagonistSprite.sprite = pirat;
+                StartCoroutine(AntagonistSwap(pirat, RumSprite));
                 break;
 
             case 31:
                 playerAlcoholSprite.sprite = TequilaSprite;
-                antagonistAlcoholSprite.sprite = TequilaSprite;
 
-                antagonistSprite.sprite = mexican;
+                StartCoroutine(AntagonistSwap(mexican, TequilaSprite));
                 break;
 
             case 41:
                 playerAlcoholSprite.sprite = MoonshineSprite;
-                antagonistAlcoholSprite.sprite = MoonshineSprite;
 
-                antagonistSprite.sprite = russian;
+                StartCoroutine(AntagonistSwap(russian, MoonshineSprite));
                 break;
 
             case 6:
@@ -71,5 +69,17 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
                 antagonistSprite.sprite = drunkMexican;
                 break;
         }
+    }
+
+    private IEnumerator AntagonistSwap(Sprite newAntagonistSprite, Sprite newAlcoholSprite)
+    {
+        animationController.SwapAnimation("Fall");
+
+        yield return new WaitForSeconds(1.5f);
+
+        antagonistSprite.sprite = newAntagonistSprite;
+        antagonistAlcoholSprite.sprite = newAlcoholSprite;
+
+        animationController.SwapAnimation("Change");
     }
 }

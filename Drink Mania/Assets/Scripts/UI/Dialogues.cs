@@ -1,8 +1,12 @@
+using TMPro;
 using UnityEngine;
 
 public class Dialogues : MonoBehaviour
 {
     [SerializeField] private AlcoholScoreEncreaser alcoholScoreEncreaser;
+    [SerializeField] private AnimationController animationController;
+
+    [SerializeField] private TextMeshProUGUI dialogueText;
 
     private string[] _dworfDialogues = new string[5]
     {
@@ -54,111 +58,136 @@ public class Dialogues : MonoBehaviour
         switch(currentLvl)
         {
             case 2:
-                Debug.Log(_dworfDialogues[0]);
+                dialogueText.text = (_dworfDialogues[0]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 4:
-                Debug.Log(_dworfDialogues[1]);
+                dialogueText.text = (_dworfDialogues[1]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 5:
-                Debug.Log(_dworfDialogues[2]);
+                dialogueText.text = (_dworfDialogues[2]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 7:
-                Debug.Log(_dworfDialogues[3]);
+                dialogueText.text = (_dworfDialogues[3]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 9:
-                Debug.Log(_dworfDialogues[4]);
+                dialogueText.text = (_dworfDialogues[4]);
+                animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 12:
-                Debug.Log(_cowboyDialogues[0]);
+                dialogueText.text = (_cowboyDialogues[0]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 14:
-                Debug.Log(_cowboyDialogues[1]);
+                dialogueText.text = (_cowboyDialogues[1]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 15:
-                Debug.Log(_cowboyDialogues[2]);
+                dialogueText.text = (_cowboyDialogues[2]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 17:
-                Debug.Log(_cowboyDialogues[3]);
+                dialogueText.text = (_cowboyDialogues[3]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 19:
-                Debug.Log(_cowboyDialogues[4]);
+                dialogueText.text = (_cowboyDialogues[4]);
+                animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 22:
-                Debug.Log(_piratDialogues[0]);
+                dialogueText.text = (_piratDialogues[0]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 24:
-                Debug.Log(_piratDialogues[1]);
+                dialogueText.text = (_piratDialogues[1]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 25:
-                Debug.Log(_piratDialogues[2]);
+                dialogueText.text = (_piratDialogues[2]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 27:
-                Debug.Log(_piratDialogues[3]);
+                dialogueText.text = (_piratDialogues[3]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 29:
-                Debug.Log(_piratDialogues[4]);
+                dialogueText.text = (_piratDialogues[4]);
+                animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 32:
-                Debug.Log(_mexicanDialogues[0]);
+                dialogueText.text = (_mexicanDialogues[0]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 34:
-                Debug.Log(_mexicanDialogues[1]);
+                dialogueText.text = (_mexicanDialogues[1]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 35:
-                Debug.Log(_mexicanDialogues[2]);
+                dialogueText.text = (_mexicanDialogues[2]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 37:
-                Debug.Log(_mexicanDialogues[3]);
+                dialogueText.text = (_mexicanDialogues[3]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 39:
-                Debug.Log(_mexicanDialogues[4]);
+                dialogueText.text = (_mexicanDialogues[4]);
+                animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 42:
-                Debug.Log(_russianDialogues[0]);
+                dialogueText.text = (_russianDialogues[0]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 44:
-                Debug.Log(_russianDialogues[1]);
+                dialogueText.text = (_russianDialogues[1]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 45:
-                Debug.Log(_russianDialogues[2]);
+                dialogueText.text = (_russianDialogues[2]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 47:
-                Debug.Log(_russianDialogues[3]);
+                dialogueText.text = (_russianDialogues[3]);
+                animationController.SwapAnimation("Swing");
                 break;
 
             case 49:
-                Debug.Log(_russianDialogues[4]);
+                dialogueText.text = (_russianDialogues[4]);
+                animationController.SwapAnimation("Swing");
                 break;
         }
     }
