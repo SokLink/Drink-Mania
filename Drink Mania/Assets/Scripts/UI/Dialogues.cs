@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -58,137 +59,151 @@ public class Dialogues : MonoBehaviour
         switch(currentLvl)
         {
             case 2:
-                dialogueText.text = (_dworfDialogues[0]);
+                SwapText(_dworfDialogues[0]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 4:
-                dialogueText.text = (_dworfDialogues[1]);
+                SwapText(_dworfDialogues[1]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 5:
-                dialogueText.text = (_dworfDialogues[2]);
+                SwapText(_dworfDialogues[2]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 7:
-                dialogueText.text = (_dworfDialogues[3]);
+                SwapText(_dworfDialogues[3]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 9:
-                dialogueText.text = (_dworfDialogues[4]);
+                SwapText(_dworfDialogues[4]);
                 animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 12:
-                dialogueText.text = (_cowboyDialogues[0]);
+                SwapText(_cowboyDialogues[0]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 14:
-                dialogueText.text = (_cowboyDialogues[1]);
+                SwapText(_cowboyDialogues[1]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 15:
-                dialogueText.text = (_cowboyDialogues[2]);
+                SwapText(_cowboyDialogues[2]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 17:
-                dialogueText.text = (_cowboyDialogues[3]);
+                SwapText(_cowboyDialogues[3]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 19:
-                dialogueText.text = (_cowboyDialogues[4]);
+                SwapText(_cowboyDialogues[4]);
                 animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 22:
-                dialogueText.text = (_piratDialogues[0]);
+                SwapText(_piratDialogues[0]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 24:
-                dialogueText.text = (_piratDialogues[1]);
+                SwapText(_piratDialogues[1]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 25:
-                dialogueText.text = (_piratDialogues[2]);
+                SwapText(_piratDialogues[2]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 27:
-                dialogueText.text = (_piratDialogues[3]);
+                SwapText(_piratDialogues[3]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 29:
-                dialogueText.text = (_piratDialogues[4]);
+                SwapText(_piratDialogues[4]);
                 animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 32:
-                dialogueText.text = (_mexicanDialogues[0]);
+                SwapText(_mexicanDialogues[0]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 34:
-                dialogueText.text = (_mexicanDialogues[1]);
+                SwapText(_mexicanDialogues[1]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 35:
-                dialogueText.text = (_mexicanDialogues[2]);
+                SwapText(_mexicanDialogues[2]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 37:
-                dialogueText.text = (_mexicanDialogues[3]);
+                SwapText(_mexicanDialogues[3]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 39:
-                dialogueText.text = (_mexicanDialogues[4]);
+                SwapText(_mexicanDialogues[4]);
                 animationController.SwapAnimation("Swing");
                 break;
 
 
 
             case 42:
-                dialogueText.text = (_russianDialogues[0]);
+                SwapText(_russianDialogues[0]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 44:
-                dialogueText.text = (_russianDialogues[1]);
+                SwapText(_russianDialogues[1]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 45:
-                dialogueText.text = (_russianDialogues[2]);
+                SwapText(_russianDialogues[2]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 47:
-                dialogueText.text = (_russianDialogues[3]);
+                SwapText(_russianDialogues[3]);
                 animationController.SwapAnimation("Swing");
                 break;
 
             case 49:
-                dialogueText.text = (_russianDialogues[4]);
+                SwapText(_russianDialogues[4]);
                 animationController.SwapAnimation("Swing");
                 break;
         }
+    }
+
+    private void SwapText(string text)
+    {
+        dialogueText.text = text;
+
+        StartCoroutine(SwapTextReverse());
+    }
+
+    private IEnumerator SwapTextReverse()
+    {
+        yield return new WaitForSeconds(3f);
+
+        dialogueText.text = "...";
     }
 }

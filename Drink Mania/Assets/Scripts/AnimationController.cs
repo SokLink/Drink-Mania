@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,13 +6,18 @@ public class AnimationController : MonoBehaviour
 {
     [SerializeField] private Animator antagonistAnimations;
     [SerializeField] private Animator antagonistAlcoholAnimations;
+    [SerializeField] private Animator antagonistAlcoholSpriteAnimations;
 
     [SerializeField] private ParticleSystem enemyDrinkParticleSystem;
+
+    [NonSerialized] public string dontDrinkAnimName = "DworfDontDrinkBeer";
+    [NonSerialized] public string startDrinkAnimName = "DworfDrinkBeer";
 
     public void SwapAnimation(string animName)
     {
         antagonistAnimations.Play("Idle");
-        antagonistAlcoholAnimations.Play("DworfDontDrink");
+        antagonistAlcoholAnimations.Play(dontDrinkAnimName);
+        antagonistAlcoholSpriteAnimations.Play("BeerSpriteChangeReverse");
         StopAllCoroutines();
 
         enemyDrinkParticleSystem.emissionRate = 0f;
@@ -21,10 +27,11 @@ public class AnimationController : MonoBehaviour
 
     private IEnumerator StopAnimation()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
 
         antagonistAnimations.Play("Idle");
-        antagonistAlcoholAnimations.Play("DrinkDwor");
+        antagonistAlcoholAnimations.Play(startDrinkAnimName);
+        antagonistAlcoholSpriteAnimations.Play("BeerSpriteChange");
 
         StartCoroutine(EnemyDrinkParticles());
     }

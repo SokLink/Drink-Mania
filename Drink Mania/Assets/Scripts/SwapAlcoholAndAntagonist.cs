@@ -6,12 +6,14 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
     [SerializeField] private Shop shop;
     [SerializeField] private AnimationController animationController;
 
-    [SerializeField] private Animator enemyAlcoholSpriteAnimator; 
+    [SerializeField] private Animator enemyAlcoholSpriteAnimator;
+    [SerializeField] private SpriteRenderer enemyAlcoholSpriteSpriteRenderer;
 
     [SerializeField] private SpriteRenderer playerAlcoholSprite;
     [SerializeField] private SpriteRenderer antagonistAlcoholSprite;
     [SerializeField] private SpriteRenderer antagonistSprite;
 
+    [SerializeField] private Sprite BeerSprite;
     [SerializeField] private Sprite VhiskeySprite;
     [SerializeField] private Sprite RumSprite;
     [SerializeField] private Sprite TequilaSprite;
@@ -33,6 +35,7 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
         {
             case 11:
                 enemyAlcoholSpriteAnimator.enabled = false;
+                enemyAlcoholSpriteSpriteRenderer.sprite = BeerSprite;
 
                 playerAlcoholSprite.sprite = VhiskeySprite;
 
@@ -83,6 +86,9 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
 
         antagonistSprite.sprite = newAntagonistSprite;
         antagonistAlcoholSprite.sprite = newAlcoholSprite;
+
+        animationController.dontDrinkAnimName = "CowboyDontDrinkBottle";
+        animationController.startDrinkAnimName = "CowboyDrinkBottle";
 
         animationController.SwapAnimation("Change");
     }
