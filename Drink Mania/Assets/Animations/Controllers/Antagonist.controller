@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-6304348827672490017
+--- !u!1102 &-6295430591297385864
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IdleAlcohol
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,20 +20,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 457f8a8315466c74192c7dfc6c5d2719, type: 2}
+  m_Motion: {fileID: 7400000, guid: 69b4e663bf70b5b4282cfc359ba7a3de, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-5591997358769510151
+--- !u!1102 &-4595312829074341267
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DrinkDwor
+  m_Name: Change
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -46,54 +46,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1329c5eabd8b6a446b469bf9ae726dd2, type: 2}
+  m_Motion: {fileID: 7400000, guid: f14f905254a38684690f8b04e6d760ca, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1107 &-4783791308029242721
-AnimatorStateMachine:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: -6304348827672490017}
-    m_Position: {x: 50, y: 280, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 7255991719865666992}
-    m_Position: {x: 330, y: 210, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -4057790623876086063}
-    m_Position: {x: 330, y: 100, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -5591997358769510151}
-    m_Position: {x: -213.57214, y: 123.21155, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 6905260607549666397}
-    m_Position: {x: -220, y: 250, z: 0}
-  m_ChildStateMachines: []
-  m_AnyStateTransitions: []
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -6304348827672490017}
---- !u!1102 &-4057790623876086063
+--- !u!1102 &-480726034835364887
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DontDrinkBottle
+  m_Name: Fall
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -106,7 +72,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 63d24a8d32e9a7f4d986acb523919ab5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 89114efc85b3b384781992f7724e7869, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -118,13 +84,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AntagonistAlcohol
+  m_Name: Antagonist
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: -4783791308029242721}
+    m_StateMachine: {fileID: 561159838975637785}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -134,14 +100,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &6905260607549666397
+--- !u!1102 &213131411166426903
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DworfDontDrink
+  m_Name: Swing
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -154,35 +120,40 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4725bd8cae07ea84cbb87bb92f591610, type: 2}
+  m_Motion: {fileID: 7400000, guid: 31bd9b227db9a364a84558014b2512eb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &7255991719865666992
-AnimatorState:
+--- !u!1107 &561159838975637785
+AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DrinkBottle
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
+  m_Name: Base Layer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: -4595312829074341267}
+    m_Position: {x: -250, y: 120, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -6295430591297385864}
+    m_Position: {x: -110, y: 310, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -480726034835364887}
+    m_Position: {x: 300, y: 320, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 213131411166426903}
+    m_Position: {x: 369.02502, y: 111.11499, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: af5edee12c97e6a4bb5b252bf4f86b2f, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: -6295430591297385864}

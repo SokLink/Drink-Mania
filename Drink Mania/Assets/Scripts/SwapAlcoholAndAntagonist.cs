@@ -6,6 +6,8 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
     [SerializeField] private Shop shop;
     [SerializeField] private AnimationController animationController;
 
+    [SerializeField] private Animator enemyAlcoholSpriteAnimator; 
+
     [SerializeField] private SpriteRenderer playerAlcoholSprite;
     [SerializeField] private SpriteRenderer antagonistAlcoholSprite;
     [SerializeField] private SpriteRenderer antagonistSprite;
@@ -30,6 +32,8 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
         switch(nextLvl)
         {
             case 11:
+                enemyAlcoholSpriteAnimator.enabled = false;
+
                 playerAlcoholSprite.sprite = VhiskeySprite;
 
                 StartCoroutine(AntagonistSwap(cowboy, VhiskeySprite));
