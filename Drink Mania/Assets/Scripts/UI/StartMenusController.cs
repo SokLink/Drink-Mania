@@ -12,6 +12,7 @@ public class StartMenusController : MonoBehaviour
     [SerializeField] private Animator antagonistAlcoholSpriteAnimations;
 
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private Dialogues dialogues;
 
     public void StartButton()
     {
@@ -43,14 +44,18 @@ public class StartMenusController : MonoBehaviour
 
     private void animationInStart()
     {
-        antagonistAlcoholAnimations.Play("DworfDrinkBeer");
-        antagonistAlcoholSpriteAnimations.Play("BeerSpriteChange");
+        dialogues.PlayOnButtonStart(true);
 
         StartCoroutine(animationInStartCoroutine());
     }
 
     private IEnumerator animationInStartCoroutine()
     {
+        yield return new WaitForSeconds(1.5f);
+
+        antagonistAlcoholAnimations.Play("DworfDrinkBeer");
+        antagonistAlcoholSpriteAnimations.Play("BeerSpriteChange");
+
         yield return new WaitForSeconds(0.4f);
 
         enemyDrinkParticleSystem.emissionRate = 50f;

@@ -13,16 +13,28 @@ public class AnimationController : MonoBehaviour
     [NonSerialized] public string dontDrinkAnimName = "DworfDontDrinkBeer";
     [NonSerialized] public string startDrinkAnimName = "DworfDrinkBeer";
 
-    public void SwapAnimation(string animName)
+    public void SwapAnimation(string animName, bool isFromStart)
     {
-        antagonistAnimations.Play("Idle");
-        antagonistAlcoholAnimations.Play(dontDrinkAnimName);
-        antagonistAlcoholSpriteAnimations.Play("BeerSpriteChangeReverse");
-        StopAllCoroutines();
+        if(isFromStart)
+        {
+            antagonistAnimations.Play("Idle");
+            StopAllCoroutines();
 
-        enemyDrinkParticleSystem.emissionRate = 0f;
-        antagonistAnimations.Play(animName);
-        StartCoroutine(StopAnimation());
+            enemyDrinkParticleSystem.emissionRate = 0f;
+            antagonistAnimations.Play(animName);
+            StartCoroutine(StopAnimation());
+        }
+        else
+        {
+            antagonistAnimations.Play("Idle");
+            antagonistAlcoholAnimations.Play(dontDrinkAnimName);
+            antagonistAlcoholSpriteAnimations.Play("BeerSpriteChangeReverse");
+            StopAllCoroutines();
+
+            enemyDrinkParticleSystem.emissionRate = 0f;
+            antagonistAnimations.Play(animName);
+            StartCoroutine(StopAnimation());
+        }
     }
 
     private IEnumerator StopAnimation()

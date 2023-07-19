@@ -13,19 +13,19 @@ public class Dialogues : MonoBehaviour
     private string[] _dworfDialogues = new string[5]
     {
         "d1",
-        "d2",
+        "Rock and Stone!",
         "d3",
         "d4",
-        "d5"
+        "For the... Aragorn..."
     };
 
     private string[] _cowboyDialogues = new string[5]
     {
-        "c1",
-        "c2",
-        "c3",
-        "c4",
-        "c5"
+        "Howdy partner!",
+        "If you want to drink - drink!",
+        "Hahaha, you're weaker than a coyote!",
+        "I'm the toughest drinker in the Wild West!",
+        "Oh, damn it..."
     };
 
     private string[] _piratDialogues = new string[5]
@@ -39,11 +39,11 @@ public class Dialogues : MonoBehaviour
 
     private string[] _mexicanDialogues = new string[5]
     {
-        "m1",
-        "m2",
-        "m3",
-        "m4",
-        "m5"
+        "Buenos dias!",
+        "Never give up, amigo!",
+        "When you only have una vida it becomes invaluable",
+        "Appreciate la familia, I didn't appreciate and perdi",
+        "Oh, santa buritos..."
     };
 
     private string[] _russianDialogues = new string[5]
@@ -59,161 +59,131 @@ public class Dialogues : MonoBehaviour
     {
         switch(currentLvl)
         {
-            case 2:
-                SwapText(_dworfDialogues[0]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Dworf");
-                break;
-
-            case 4:
+            case 3:
                 SwapText(_dworfDialogues[1]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Dworf");
                 break;
 
-            case 5:
+            case 6:
                 SwapText(_dworfDialogues[2]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Dworf");
                 break;
 
-            case 7:
+            case 8:
                 SwapText(_dworfDialogues[3]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Dworf");
-                break;
-
-            case 9:
-                SwapText(_dworfDialogues[4]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Dworf");
                 break;
 
 
 
-            case 12:
-                SwapText(_cowboyDialogues[0]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Cowboy");
+            case 11:
+                StartCoroutine(SwapDialoguesWhenSwapEnemyes("Dworf", "Cowboy", _dworfDialogues[4], _cowboyDialogues[0]));
                 break;
 
-            case 14:
+
+
+            case 13:
                 SwapText(_cowboyDialogues[1]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Cowboy");
                 break;
 
-            case 15:
+            case 16:
                 SwapText(_cowboyDialogues[2]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Cowboy");
                 break;
 
-            case 17:
+            case 18:
                 SwapText(_cowboyDialogues[3]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Cowboy");
-                break;
-
-            case 19:
-                SwapText(_cowboyDialogues[4]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Cowboy");
                 break;
 
 
 
-            case 22:
-                SwapText(_piratDialogues[0]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Pirat");
+            case 21:
+                StartCoroutine(SwapDialoguesWhenSwapEnemyes("Cowboy", "Pirat", _cowboyDialogues[4], _piratDialogues[0]));
                 break;
 
-            case 24:
+
+
+            case 23:
                 SwapText(_piratDialogues[1]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Pirat");
                 break;
 
-            case 25:
+            case 26:
                 SwapText(_piratDialogues[2]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Pirat");
                 break;
 
-            case 27:
+            case 28:
                 SwapText(_piratDialogues[3]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Pirat");
-                break;
-
-            case 29:
-                SwapText(_piratDialogues[4]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Pirat");
                 break;
 
 
 
-            case 32:
-                SwapText(_mexicanDialogues[0]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Mexican");
+            case 31:
+                StartCoroutine(SwapDialoguesWhenSwapEnemyes("Pirat", "Mexican", _piratDialogues[4], _mexicanDialogues[0]));
                 break;
 
-            case 34:
+
+
+            case 33:
                 SwapText(_mexicanDialogues[1]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Mexican");
                 break;
 
-            case 35:
+            case 36:
                 SwapText(_mexicanDialogues[2]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Mexican");
                 break;
 
-            case 37:
+            case 38:
                 SwapText(_mexicanDialogues[3]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Mexican");
-                break;
-
-            case 39:
-                SwapText(_mexicanDialogues[4]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Mexican");
                 break;
 
 
 
-            case 42:
-                SwapText(_russianDialogues[0]);
-                animationController.SwapAnimation("Swing");
-                audioManager.VoicePlay("Russian");
+            case 41:
+                StartCoroutine(SwapDialoguesWhenSwapEnemyes("Mexican", "Russian", _mexicanDialogues[4], _russianDialogues[0]));
                 break;
 
-            case 44:
+
+
+            case 43:
                 SwapText(_russianDialogues[1]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Russian");
                 break;
 
-            case 45:
+            case 46:
                 SwapText(_russianDialogues[2]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Russian");
                 break;
 
-            case 47:
+            case 48:
                 SwapText(_russianDialogues[3]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Russian");
                 break;
 
-            case 49:
+            case 50:
                 SwapText(_russianDialogues[4]);
-                animationController.SwapAnimation("Swing");
+                animationController.SwapAnimation("Swing", false);
                 audioManager.VoicePlay("Russian");
                 break;
         }
@@ -228,8 +198,26 @@ public class Dialogues : MonoBehaviour
 
     private IEnumerator SwapTextReverse()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
         dialogueText.text = "...";
+    }
+
+    private IEnumerator SwapDialoguesWhenSwapEnemyes(string firstVoiceOwner, string secondVoiceOwner, string fristDialogue, string secondDialogue)
+    {
+        dialogueText.text  = fristDialogue;
+        audioManager.VoicePlay(firstVoiceOwner);
+
+        yield return new WaitForSeconds(3f);
+
+        SwapText(secondDialogue);
+        audioManager.VoicePlay(secondVoiceOwner);
+    }
+
+    public void PlayOnButtonStart(bool isFromStart)
+    {
+        SwapText(_dworfDialogues[0]);
+        animationController.SwapAnimation("Swing", isFromStart);
+        audioManager.VoicePlay("Dworf");
     }
 }

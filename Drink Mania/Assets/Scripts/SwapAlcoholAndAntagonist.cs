@@ -80,7 +80,7 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
 
     private IEnumerator AntagonistSwap(Sprite newAntagonistSprite, Sprite newAlcoholSprite)
     {
-        animationController.SwapAnimation("Fall");
+        animationController.SwapAnimation("Fall", false);
 
         yield return new WaitForSeconds(1.5f);
 
@@ -90,6 +90,6 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
         animationController.dontDrinkAnimName = "CowboyDontDrinkBottle";
         animationController.startDrinkAnimName = "CowboyDrinkBottle";
 
-        animationController.SwapAnimation("Change");
+        animationController.SwapAnimation("Change", false);
     }
 }
