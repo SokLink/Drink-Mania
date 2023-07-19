@@ -12,10 +12,10 @@ public class Dialogues : MonoBehaviour
 
     private string[] _dworfDialogues = new string[5]
     {
-        "d1",
+        "Hello wimp! Ready to lose?",
         "Rock and Stone!",
-        "d3",
-        "d4",
+        "I hate elves, but even more I hate losing",
+        "Oh... it's a pity my six brothers aren't here",
         "For the... Aragorn..."
     };
 
@@ -30,11 +30,11 @@ public class Dialogues : MonoBehaviour
 
     private string[] _piratDialogues = new string[5]
     {
-        "p1",
-        "p2",
-        "p3",
-        "p4",
-        "p5"
+        "Ahaha, this land rat has already managed to fill the hold of two weaklings",
+        "Squid guts! I will send you to the bottom of the sea!",
+        "Once I drank my whole team in a tavern to the mayor of a provincial town",
+        "You would be a great cabin boy on my ship",
+        "Fair wind to you, I throw out a white flag"
     };
 
     private string[] _mexicanDialogues = new string[5]
@@ -48,11 +48,11 @@ public class Dialogues : MonoBehaviour
 
     private string[] _russianDialogues = new string[5]
     {
-        "r1",
-        "r2",
-        "r3",
-        "r4",
-        "r5"
+        "Nu che maloy, davai poveselimsya!",
+        "Ty che ah*el samogon zakusyvat!?",
+        "Pomnyu ya kak to plaval v bochke iz-pod seledki vo vremya voiny",
+        "Muzhik, a ty ne ploh, u tebya baki pryam dlya alkashki est kak ya vizhu",
+        "Slovo za slovo, h*em po stolu!"
     };
 
     public void PlayDialogues(int currentLvl)
