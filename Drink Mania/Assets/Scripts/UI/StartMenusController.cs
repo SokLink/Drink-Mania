@@ -15,6 +15,8 @@ public class StartMenusController : MonoBehaviour
 
     public void StartButton()
     {
+        audioManager.EnviromentalStartOnStart();
+
         audioManager.SwapToMainMusic();
         animationInStart();
 

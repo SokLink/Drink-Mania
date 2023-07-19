@@ -6,6 +6,7 @@ public class Dialogues : MonoBehaviour
 {
     [SerializeField] private AlcoholScoreEncreaser alcoholScoreEncreaser;
     [SerializeField] private AnimationController animationController;
+    [SerializeField] private AudioManager audioManager;
 
     [SerializeField] private TextMeshProUGUI dialogueText;
 
@@ -61,26 +62,31 @@ public class Dialogues : MonoBehaviour
             case 2:
                 SwapText(_dworfDialogues[0]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Dworf");
                 break;
 
             case 4:
                 SwapText(_dworfDialogues[1]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Dworf");
                 break;
 
             case 5:
                 SwapText(_dworfDialogues[2]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Dworf");
                 break;
 
             case 7:
                 SwapText(_dworfDialogues[3]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Dworf");
                 break;
 
             case 9:
                 SwapText(_dworfDialogues[4]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Dworf");
                 break;
 
 
@@ -88,26 +94,31 @@ public class Dialogues : MonoBehaviour
             case 12:
                 SwapText(_cowboyDialogues[0]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Cowboy");
                 break;
 
             case 14:
                 SwapText(_cowboyDialogues[1]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Cowboy");
                 break;
 
             case 15:
                 SwapText(_cowboyDialogues[2]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Cowboy");
                 break;
 
             case 17:
                 SwapText(_cowboyDialogues[3]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Cowboy");
                 break;
 
             case 19:
                 SwapText(_cowboyDialogues[4]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Cowboy");
                 break;
 
 
@@ -115,26 +126,31 @@ public class Dialogues : MonoBehaviour
             case 22:
                 SwapText(_piratDialogues[0]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Pirat");
                 break;
 
             case 24:
                 SwapText(_piratDialogues[1]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Pirat");
                 break;
 
             case 25:
                 SwapText(_piratDialogues[2]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Pirat");
                 break;
 
             case 27:
                 SwapText(_piratDialogues[3]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Pirat");
                 break;
 
             case 29:
                 SwapText(_piratDialogues[4]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Pirat");
                 break;
 
 
@@ -142,26 +158,31 @@ public class Dialogues : MonoBehaviour
             case 32:
                 SwapText(_mexicanDialogues[0]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Mexican");
                 break;
 
             case 34:
                 SwapText(_mexicanDialogues[1]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Mexican");
                 break;
 
             case 35:
                 SwapText(_mexicanDialogues[2]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Mexican");
                 break;
 
             case 37:
                 SwapText(_mexicanDialogues[3]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Mexican");
                 break;
 
             case 39:
                 SwapText(_mexicanDialogues[4]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Mexican");
                 break;
 
 
@@ -169,26 +190,31 @@ public class Dialogues : MonoBehaviour
             case 42:
                 SwapText(_russianDialogues[0]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Russian");
                 break;
 
             case 44:
                 SwapText(_russianDialogues[1]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Russian");
                 break;
 
             case 45:
                 SwapText(_russianDialogues[2]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Russian");
                 break;
 
             case 47:
                 SwapText(_russianDialogues[3]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Russian");
                 break;
 
             case 49:
                 SwapText(_russianDialogues[4]);
                 animationController.SwapAnimation("Swing");
+                audioManager.VoicePlay("Russian");
                 break;
         }
     }

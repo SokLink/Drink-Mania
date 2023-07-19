@@ -12,6 +12,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private Dialogues dialogues;
     [SerializeField] private DrinkParticles drinkParticles;
     [SerializeField] private AlcoholScoreDecreaser alcoholScoreDecreaser;
+    [SerializeField] private AudioManager audioManager;
 
     [NonSerialized] public int nextLvl = 2;
     [NonSerialized] public float price = 100;
@@ -70,6 +71,8 @@ public class Shop : MonoBehaviour
 
             clickZoneChange.DecreaseClickZoneScale();
             dialogues.PlayDialogues(nextLvl - 1);
+
+            audioManager.LvlUpSoundPlay();
         }
     }
 

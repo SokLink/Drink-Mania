@@ -6,12 +6,14 @@ public class ClickToAlcoholDetection : MonoBehaviour, IPointerClickHandler
     [SerializeField] private AlcoholScoreEncreaser alcoholScoreEncreaser;
     [SerializeField] private PlayerAlcoholAnimations playerAlcoholAnimations;
     [SerializeField] private AlcoholScoreDecreaser alcoholScoreDecreaser;
+    [SerializeField] private AudioManager audioManager;
 
     public void OnPointerClick(PointerEventData eventData)
     {
         AlcoholScoreEncreaserController();
         PlayerAlcoholAnimationsController();
         AlcoholScoreDecreaserController();
+        audioManager.ButtonAudio();
     }
 
     private void AlcoholScoreEncreaserController()
