@@ -11,7 +11,7 @@ public class ClickZoneChange : MonoBehaviour
 
     private void FixedUpdate()
     {
-        clickZoneTransform.position = Vector3.MoveTowards(clickZoneTransform.position, pathElements[SetTargetPathPoint()].position, (alcoholScoreEncreaser.encreaseMagnitude * 0.25f) * Time.deltaTime);
+        clickZoneTransform.position = Vector3.MoveTowards(clickZoneTransform.position, pathElements[SetTargetPathPoint()].position, (alcoholScoreEncreaser.lvl * 0.25f) * Time.deltaTime);
     }
 
     private int SetTargetPathPoint()
@@ -34,6 +34,6 @@ public class ClickZoneChange : MonoBehaviour
 
     public void DecreaseClickZoneScale()
     {
-        clickZoneTransform.localScale = new Vector2(50f / (alcoholScoreEncreaser.encreaseMagnitude * 0.25f), 50f / (alcoholScoreEncreaser.encreaseMagnitude * 0.25f));
+        clickZoneTransform.localScale = new Vector2(50f / (alcoholScoreEncreaser.lvl * 0.25f), 50f / (alcoholScoreEncreaser.lvl * 0.25f));
     }
 }

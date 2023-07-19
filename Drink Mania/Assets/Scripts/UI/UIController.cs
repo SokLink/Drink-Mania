@@ -42,25 +42,7 @@ public class UIController : MonoBehaviour
     {
         string scoreText;
 
-        if(score >= 1000f && score <= 1000000f)
-        {
-            scoreText = (score / 1000).ToString() + "k";
-        }
-
-        else if (score >= 1000000f && score <= 1000000000f)
-        {
-            scoreText = (score / 1000000).ToString() + "m";
-        }
-
-        else if (score >= 1000000000f)
-        {
-            scoreText = (score / 1000000000).ToString() + "b";
-        }
-
-        else
-        {
-            scoreText = score.ToString();
-        }
+        scoreText = score.ToString();
 
         return scoreText;
     }

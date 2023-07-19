@@ -202,7 +202,7 @@ public class Dialogues : MonoBehaviour
 
     private IEnumerator SwapTextReverse()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         dialogueText.text = "...";
     }

@@ -11,11 +11,13 @@ public class Shop : MonoBehaviour
     [SerializeField] private ClickZoneChange clickZoneChange;
     [SerializeField] private Dialogues dialogues;
     [SerializeField] private DrinkParticles drinkParticles;
+    [SerializeField] private AlcoholScoreDecreaser alcoholScoreDecreaser;
 
     [NonSerialized] public int nextLvl = 2;
-    [NonSerialized] public float price = 1;
+    [NonSerialized] public float price = 100;
 
-    private float _priceModificator = 1f;
+    private int _priceModificator = 100;
+    private int _scoreEncreaserModificator = 1;
 
     private void Start()
     {
@@ -28,18 +30,21 @@ public class Shop : MonoBehaviour
         {
             if (nextLvl == 11 || nextLvl == 21 || nextLvl == 31 || nextLvl == 41)
             {
-                alcoholScoreEncreaser.encreaseMagnitude += 1;
+                alcoholScoreEncreaser.lvl += 1;
+
                 alcoholScoreCounter.alcoholScore -= price;
 
                 swapAlcoholAndAntagonist.Swap(nextLvl);
                 drinkParticles.SwapDrinkParticles(nextLvl);
 
                 playerAlcoholAnimations.isBeer = false;
+
+                alcoholScoreDecreaser._decreaseMagnitude += 1;
             }
 
             else if (nextLvl == 6 || nextLvl == 16 || nextLvl == 26 || nextLvl == 36)
             {
-                alcoholScoreEncreaser.encreaseMagnitude += 1;
+                alcoholScoreEncreaser.lvl += 1;
                 alcoholScoreCounter.alcoholScore -= price;
 
                 swapAlcoholAndAntagonist.Swap(nextLvl);
@@ -47,16 +52,18 @@ public class Shop : MonoBehaviour
 
             else if (nextLvl >= 51)
             {
-
+                return;
             }
 
             else
             {
-                alcoholScoreEncreaser.encreaseMagnitude += 1;
+                alcoholScoreEncreaser.lvl += 1;
                 alcoholScoreCounter.alcoholScore -= price;
             }
 
-            nextLvl = alcoholScoreEncreaser.encreaseMagnitude + 1;
+            UpgradeEncreaseMagnitude();
+
+            nextLvl = alcoholScoreEncreaser.lvl + 1;
             price = alcoholScoreEncreaser.encreaseMagnitude * _priceModificator;
 
             uIController.ShopUIController(nextLvl, price);
@@ -64,5 +71,25 @@ public class Shop : MonoBehaviour
             clickZoneChange.DecreaseClickZoneScale();
             dialogues.PlayDialogues(nextLvl - 1);
         }
+    }
+
+    private void UpgradeEncreaseMagnitude()
+    {
+        if(nextLvl == 11)
+        {
+            _scoreEncreaserModificator = 10;
+        }
+
+        if (nextLvl == 31)
+        {
+            _scoreEncreaserModificator = 100;
+        }
+
+        if (nextLvl == 41)
+        {
+            _scoreEncreaserModificator = 100;
+        }
+
+        alcoholScoreEncreaser.encreaseMagnitude += _scoreEncreaserModificator;
     }
 }

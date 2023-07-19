@@ -40,6 +40,6 @@ public class AnimationController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
 
-        enemyDrinkParticleSystem.emissionRate = 100f;
+        enemyDrinkParticleSystem.emissionRate = 50f;
     }
 }

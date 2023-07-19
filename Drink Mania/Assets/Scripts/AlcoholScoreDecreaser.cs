@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class AlcoholScoreDecreaser : MonoBehaviour
     private float _timeBeforeDercrease = 2.5f;
     private float _decreaseTimer = 1f;
 
-    private int _decreaseMagnitude = 1;
+    [NonSerialized] public int _decreaseMagnitude = 1;
     private float _minDecreaseScore = 10f;
 
     public IEnumerator Decreaser()
