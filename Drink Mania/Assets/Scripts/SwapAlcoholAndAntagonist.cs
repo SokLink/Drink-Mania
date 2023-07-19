@@ -5,6 +5,7 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
 {
     [SerializeField] private Shop shop;
     [SerializeField] private AnimationController animationController;
+    [SerializeField] private AudioManager audioManager;
 
     [SerializeField] private Animator enemyAlcoholSpriteAnimator;
     [SerializeField] private SpriteRenderer enemyAlcoholSpriteSpriteRenderer;
@@ -81,6 +82,7 @@ public class SwapAlcoholAndAntagonist : MonoBehaviour
     private IEnumerator AntagonistSwap(Sprite newAntagonistSprite, Sprite newAlcoholSprite)
     {
         animationController.SwapAnimation("Fall", false);
+        audioManager.FallSound();
 
         yield return new WaitForSeconds(1.5f);
 

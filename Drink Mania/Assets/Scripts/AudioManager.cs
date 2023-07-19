@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip DrinkSound;
     [SerializeField] private AudioClip enviromentSound;
     [SerializeField] private AudioClip lvlUpSound;
+    [SerializeField] private AudioClip fallSound;
 
     [SerializeField] private AudioClip DworfVoice;
     [SerializeField] private AudioClip CowboyVoice;
@@ -20,6 +21,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource tableAudioSource;
     [SerializeField] private AudioSource enemyAudioSource;
     [SerializeField] private AudioSource GameControllerAS;
+    [SerializeField] private AudioSource AntogonistSpriteAS;
 
     private void Awake()
     {
@@ -92,5 +94,11 @@ public class AudioManager : MonoBehaviour
     {
         GameControllerAS.clip = lvlUpSound;
         GameControllerAS.Play();
+    }
+
+    public void FallSound()
+    {
+        AntogonistSpriteAS.clip = fallSound;
+        AntogonistSpriteAS.Play();
     }
 }

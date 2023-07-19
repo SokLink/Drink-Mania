@@ -15,9 +15,9 @@ public class Shop : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
 
     [NonSerialized] public int nextLvl = 2;
-    [NonSerialized] public float price = 100;
+    [NonSerialized] public float price = 1;
 
-    private int _priceModificator = 100;
+    private int _priceModificator = 1;
     private int _scoreEncreaserModificator = 1;
 
     private void Start()

@@ -13085,6 +13085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shop: {fileID: 1779987073}
   animationController: {fileID: 887124190}
+  audioManager: {fileID: 1779987081}
   enemyAlcoholSpriteAnimator: {fileID: 473573121}
   enemyAlcoholSpriteSpriteRenderer: {fileID: 473573120}
   playerAlcoholSprite: {fileID: 1290070341}
@@ -13185,6 +13186,7 @@ MonoBehaviour:
   DrinkSound: {fileID: 8300000, guid: 8f92284cdad22ac4093b1f99dc0b1b81, type: 3}
   enviromentSound: {fileID: 8300000, guid: 3d30c2a3505c14d4299ce030451a7d98, type: 3}
   lvlUpSound: {fileID: 8300000, guid: 5b03ef1465f9f9b4e8f3f6d36bf9474e, type: 3}
+  fallSound: {fileID: 8300000, guid: d2bf2d621ae13684ca852c98aa14a286, type: 3}
   DworfVoice: {fileID: 8300000, guid: c5ffac9b817840442930260846f620ee, type: 3}
   CowboyVoice: {fileID: 8300000, guid: 2be5950cc4bb71245bac199bd43ef90c, type: 3}
   PiratVoice: {fileID: 8300000, guid: 8c22029db0044124cbf34ed4e600c729, type: 3}
@@ -13196,6 +13198,7 @@ MonoBehaviour:
   tableAudioSource: {fileID: 2099793158}
   enemyAudioSource: {fileID: 887124193}
   GameControllerAS: {fileID: 1779987082}
+  AntogonistSpriteAS: {fileID: 1818695276}
 --- !u!82 &1779987082
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13302,6 +13305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1818695275}
   - component: {fileID: 1818695274}
+  - component: {fileID: 1818695276}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -13376,6 +13380,102 @@ Transform:
   m_Father: {fileID: 887124189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1818695276
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818695273}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 0.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1856504176
 GameObject:
   m_ObjectHideFlags: 0
